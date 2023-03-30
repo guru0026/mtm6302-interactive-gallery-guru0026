@@ -70,14 +70,19 @@ const images = [
     }
 ]
 
-document.querySelectorAll('.image-container img').forEach(image => {
-    image.onclick = () => {
-        document.querySelector('.popup-image').getElementsByClassName.display = 'block';
-        document.querySelector('.popup-image img').src = image.getAttribute('src');
-    }
-})
+const gallery = document.getElementById('gallery');
+const popup = document.getElementById('popup');
+const selectedImage = document.getElementById('selectedImage');
+const imageIndexes = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+const selectedIndex = null;
 
-document.querySelector('.popup-image img').onclick = () =>{
-    document.querySelector('.popup-image').getElementsByClassName.display = 'none';
-}
+imageIndexes.forEach (i => {
+    const image = document.createElement('img');
+    image.alt = `Image of sneaker ${i}`;
+    image.src = `/images/${i}.jpg`;
+    // image.addEventListener('click', () => {
+
+    // });
+    gallery.appendChild(image);
+})
 

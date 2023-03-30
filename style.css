@@ -8,33 +8,44 @@ html {
     background: #000000;
 }
 
-.container .image-container {
+.container #gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     padding: 5rem;
+    /* display: grid;
+    grid-template-columns: repeat(autofit, minmax(20rem, 1fr));
+    grid-gap: 2rem; */
 }
 
-.container .image-container .image {
+.galleryImg {
+    height: 20rem;
+    width: 20rem;
+    border: 1rem solid #ffffff;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.container #gallery .thumb {
     height: 20rem;
     width: 20rem;
     border: 1rem solid #ffffff;
     cursor: pointer;
 }
 
-.container .image-container .image img {
+.container #gallery .thumb img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
 }
 
-.container .image-container .image:hover img {
+.container #gallery .thumb:hover img {
     transform: scale(1.05);
 }
 
-.container .popup-image {
+.container .enlarged-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,9 +54,10 @@ html {
     width: 100%;
     z-index: 10;
     cursor: pointer;
+    display: none;
 }
 
-.container .popup-image img {
+.container .enlarged-image img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -53,4 +65,5 @@ html {
     border: 1rem solid #ffffff;
     width: 90vw;
     object-fit: cover;
+    
 }
