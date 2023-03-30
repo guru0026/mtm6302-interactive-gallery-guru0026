@@ -80,3 +80,4 @@ document.querySelectorAll('.image-container img').forEach(image => {
 document.querySelector('.popup-image img').onclick = () =>{
     document.querySelector('.popup-image').getElementsByClassName.display = 'none';
 }
+
