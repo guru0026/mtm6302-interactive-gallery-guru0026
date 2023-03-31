@@ -1,21 +1,33 @@
 html {
     box-sizing: border-box;
+    background: #000000;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .container {
-    position: relative;
-    min-height: 100vh;
-    background: #000000;
+    /* position: relative;
+    min-height: 100vh; */
+
+    padding: 4rem 2rem;
+    margin: 0 auto;
 }
 
-.container #gallery {
+#gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     padding: 5rem;
     /* display: grid;
-    grid-template-columns: repeat(autofit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 2rem; */
 }
 
@@ -25,9 +37,36 @@ html {
     border: 1rem solid #ffffff;
     transition: .2s linear;
     cursor: pointer;
+    object-fit: cover;
 }
 
-.container #gallery .thumb {
+.galleryImg:hover {
+    transform: scale(1.05); 
+    border: 0.7rem solid #ffffff;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateY(100%); */
+    transition: .2s transform;
+    padding: 4rem;
+    z-index: 9;
+}
+
+#selectedImage {
+    /* max-height: 100%; */
+    width: 90vw;
+}
+
+/* .thumb {
     height: 20rem;
     width: 20rem;
     border: 1rem solid #ffffff;
@@ -43,9 +82,10 @@ html {
 
 .container #gallery .thumb:hover img {
     transform: scale(1.05);
-}
+    border: 0.5rem solid #ffffff;
+} */
 
-.container .enlarged-image {
+/* .container .enlarged-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -55,9 +95,9 @@ html {
     z-index: 10;
     cursor: pointer;
     display: none;
-}
+} */
 
-.container .enlarged-image img {
+/* .container .enlarged-image img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,4 +106,4 @@ html {
     width: 90vw;
     object-fit: cover;
     
-}
+} */
